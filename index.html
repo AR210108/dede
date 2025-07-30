@@ -14,9 +14,11 @@
 
         <div class="card">
             <div class="slideshow">
-                <img src="foto1.jpg" alt="Foto Dede" class="slide active">
-                <img src="foto2.jpg" alt="Foto Dede" class="slide">
-                <img src="foto3.jpg" alt="Foto Dede" class="slide">
+                <div class="slides">
+                    <img src="foto1.jpg" alt="Foto Dede">
+                    <img src="foto2.jpg" alt="Foto Dede">
+                    <img src="foto3.jpg" alt="Foto Dede">
+                </div>
             </div>
             <p class="message">
                 "Dede, terima kasih sudah hadir di hidupku.  
@@ -32,14 +34,12 @@
 
     <script>
         let index = 0;
-        const slides = document.querySelectorAll('.slide');
+        const slides = document.querySelector(".slides");
+        const totalSlides = document.querySelectorAll(".slides img").length;
 
         function showSlide() {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) slide.classList.add('active');
-            });
-            index = (index + 1) % slides.length;
+            index = (index + 1) % totalSlides;
+            slides.style.transform = `translateX(-${index * 100}%)`;
         }
 
         setInterval(showSlide, 5000);
