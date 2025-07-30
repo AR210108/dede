@@ -19,12 +19,12 @@ body {
 
 .container {
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
     color: #444;
     margin-bottom: 20px;
@@ -40,11 +40,11 @@ header h1 {
 
 .slideshow {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto 15px;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 20px; /* Biar kotak dengan sedikit rounded */
     border: 4px solid #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -73,4 +73,4 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
-  }
+}
