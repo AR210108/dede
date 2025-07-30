@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dede Tersayang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💖 Untuk Dede Tersayang 💖</h1>
+        </header>
+
+        <div class="card">
+            <div class="slideshow">
+                <img src="foto1.jpg" alt="Foto Dede" class="slide active">
+                <img src="foto2.jpg" alt="Foto Dede" class="slide">
+                <img src="foto3.jpg" alt="Foto Dede" class="slide">
+            </div>
+            <p class="message">
+                "Dede, terima kasih sudah hadir di hidupku.  
+                Kamu itu pelangi setelah hujan, bintang di malam gelap,  
+                dan alasan aku terus tersenyum setiap hari. 🌸"
+            </p>
+        </div>
+
+        <footer>
+            <p>❤️ Dibuat dengan penuh sayang oleh Kakakmu ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+            index = (index + 1) % slides.length;
+        }
+
+        setInterval(showSlide, 5000);
+    </script>
+</body>
+</html>
